@@ -1,8 +1,8 @@
 class signUpFirstPage {
     constructor() {
-        this.usernameInput = '#signup-name';
-        this.emailInput = '#signup-email';
-        this.signUpButton = '#signup-button';
+        this.usernameInput = '[data-qa="signup-name"]';
+        this.emailInput = '[data-qa="signup-email"]';
+        this.signUpButton = '[data-qa="signup-button"]';
 
         this.URL = "https://www.automationexercise.com/login"
     }
