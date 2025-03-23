@@ -1,6 +1,6 @@
 class signUpFormPage {
     constructor() {
-        this.radioButtonSelector = 'input[type"radio"][name="title"]';
+        this.radioButtonSelector = 'input[type="radio"][name="title"]';
         this.nameInput = '#name';
         this.passwordInput = '#password';
         this.birthDaySelect = '#days';
@@ -20,7 +20,7 @@ class signUpFormPage {
 
     selectGender(gender) {
         cy.get(this.radioButtonSelector)
-            .filter(`[value="${gender}]`)
+            .filter(`[value="${gender}"]`)
             .check();
     }
 
