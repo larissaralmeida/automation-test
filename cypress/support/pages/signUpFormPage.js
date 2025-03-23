@@ -14,7 +14,7 @@ class signUpFormPage {
         this.cityInput = '#city';
         this.zipCodeInput = '#zipcode';
         this.mobileNumberInput = '#mobile_number';
-        this.submitButton = '#create-account';
+        this.submitButton = '[data-qa="create-account"]';
 
     }
 
@@ -70,7 +70,7 @@ class signUpFormPage {
         cy.get(this.mobileNumberInput).type(mobileNumber);
     }
 
-    submit() {
+    submitForm() {
         cy.get(this.submitButton).click();
     }
 }
