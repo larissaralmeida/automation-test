@@ -12,11 +12,17 @@ describe('Cadastro de novo usuário', () => {
         //Acessando a segunda página de cadastro
 
         signUpFormPage.selectGender('Mrs');
+        signUpFormPage.fillPassword('password123');
+        signUpFormPage.selectBirthDate('2', '1', '1994');
         signUpFormPage.fillFirstName('John');
         signUpFormPage.fillLastName('Doe');
-        signUpFormPage.fillPassword('password123');
+        signUpFormPage.fillAddress("Avenida 2");
+        signUpFormPage.fillCountry("United States");
+        signUpFormPage.fillState("California");
+        signUpFormPage.fillCity("Los Angeles");
+        signUpFormPage.fillZipCode("51130550");
+        signUpFormPage.fillMobileNumber("9999999999");
 
-        
     });
 
 });
