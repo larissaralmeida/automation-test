@@ -3,5 +3,9 @@
   "version": "1.0.0",
   "devDependencies": {
     "cypress": "^14.2.0"
+  },
+  "scripts": {
+    "test": "cypress open",
+    "test:headless": "cypress run"
   }
 }
