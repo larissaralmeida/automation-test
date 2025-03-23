@@ -8,7 +8,7 @@ class signUpFormPage {
         this.birthYearSelect = '#years';
         this.firstNameInput = '#first_name';
         this.lastNameInput = '#last_name';
-        this.adressInput = '#address';
+        this.adressInput = '#address1';
         this.countrySelect = '#country';
         this.stateInput = '#state';
         this.cityInput = '#city';
@@ -51,7 +51,7 @@ class signUpFormPage {
     }
 
     fillCountry(country) {
-        cy.get(this.countrySelect).type(country);
+        cy.get(this.countrySelect).select(country);
     }
 
     fillState(state) {
