@@ -20,6 +20,9 @@ describe("Login de usuário", () => {
         signInPage.fillPassword(userData.password);
         signInPage.submit();
 
+        const username = userData.username;
+
+        cy.contains('a', `Logged in as ${username}`).should('be.visible');
 
     });
 
