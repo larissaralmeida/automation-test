@@ -16,13 +16,24 @@ describe("Login de usuário", () => {
         cy.wrap(userData).should('exist');
 
         signInPage.visit();
-        signInPage.fillEmail(userData.email);
-        signInPage.fillPassword(userData.password);
+        signInPage.fillEmail(userData.validUser.email);
+        signInPage.fillPassword(userData.validUser.password);
         signInPage.submit();
 
-        const username = userData.username;
+        const username = userData.validUser.username;
 
         cy.contains('a', `Logged in as ${username}`).should('be.visible');
+
+    });
+
+    it.only('Não deve permitir login com credenciais inválidas', () => {
+
+        signInPage.visit();
+        signInPage.fillEmail(userData.invalidUser.email);
+        signInPage.fillPassword(userData.invalidUser.password);
+        signInPage.submit();
+
+        
 
     });
 
