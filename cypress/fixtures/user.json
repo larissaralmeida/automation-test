@@ -1,5 +1,14 @@
 {
-  "username": "automation test",
-  "email": "automation_test123@test.com",
-  "password": "123456789"
+  "validUser": {
+    "username": "automation test",
+    "email": "automation_test123@test.com",
+    "password": "123456789"
+
+  },
+
+    "invalidUser": {
+    "email": "emailinvalido@email.com",
+    "password": "123456"
+  }
+
 }
