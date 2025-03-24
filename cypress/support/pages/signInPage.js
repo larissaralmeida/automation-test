@@ -3,6 +3,7 @@ class signInPage {
         this.emailInput = '[data-qa="login-email"]';
         this.passwordInput = '[data-qa="login-password"]';
         this.loginButton = '[data-qa="login-button"]';
+        this.errorMessage = 'p';
 
         this.URL = "https://www.automationexercise.com/login";
     }
@@ -21,6 +22,10 @@ class signInPage {
 
     submit() {
         cy.get(this.loginButton).click();
+    }
+
+    getErrorMessage() {
+        return cy.contains(this.errorMessage, 'Your email or password is incorrect!');
     }
 }
 
