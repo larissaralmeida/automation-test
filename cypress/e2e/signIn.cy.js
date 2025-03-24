@@ -26,14 +26,14 @@ describe("Login de usuário", () => {
 
     });
 
-    it.only('Não deve permitir login com credenciais inválidas', () => {
+    it('Não deve permitir login com credenciais inválidas', () => {
 
         signInPage.visit();
         signInPage.fillEmail(userData.invalidUser.email);
         signInPage.fillPassword(userData.invalidUser.password);
         signInPage.submit();
 
-        
+        signInPage.getErrorMessage().should('be.visible');
 
     });
 
