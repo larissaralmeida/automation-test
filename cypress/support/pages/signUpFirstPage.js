@@ -3,6 +3,7 @@ class signUpFirstPage {
         this.usernameInput = '[data-qa="signup-name"]';
         this.emailInput = '[data-qa="signup-email"]';
         this.signUpButton = '[data-qa="signup-button"]';
+        this.errorMessage = 'p';
 
         this.URL = "https://www.automationexercise.com/login"
     }
@@ -21,6 +22,10 @@ class signUpFirstPage {
 
     submit() {
         cy.get(this.signUpButton).click();
+    }
+
+    getErrorMessage() {
+        return cy.contains(this.errorMessage, 'Email Address already exist!');
     }
 }
 
