@@ -20,7 +20,7 @@ describe('Cadastro com e-mail já existente', () => {
         signUpFirstPage.fillEmail(userData.validUser.email);
         signUpFirstPage.submit();
 
-        signUpFirstPage.getErrorMessage().should('be.visible');
+        signUpFirstPage.errorMessage.should('be.visible');
 
 
     });

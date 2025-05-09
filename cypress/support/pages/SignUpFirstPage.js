@@ -15,6 +15,9 @@ class SignUpFirstPage {
     get signUpButton() {
         return cy.get('[data-qa="signup-button"]');
     }
+    get errorMessage() {
+        return cy.contains('Email Address already exist!');
+    }
 
     visit() {
         cy.visit(this.url);
