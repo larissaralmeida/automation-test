@@ -1,4 +1,4 @@
-import signUpFirstPage from "../support/pages/signUpFirstPage";
+import signUpFirstPage from "../support/pages/SignUpFirstPage";
 
 describe('Cadastro com e-mail já existente', () => {
 
