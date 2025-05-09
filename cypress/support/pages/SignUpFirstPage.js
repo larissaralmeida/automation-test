@@ -1,27 +1,36 @@
-class signUpFirstPage {
-    constructor() {
-        this.usernameInput = '[data-qa="signup-name"]';
-        this.emailInput = '[data-qa="signup-email"]';
-        this.signUpButton = '[data-qa="signup-button"]';
+class SignUpFirstPage {
 
-        this.URL = "https://www.automationexercise.com/login"
+    get url() {
+        return "https://www.automationexercise.com/login";
+    }
+
+    get usernameInput() {
+        return cy.get('[data-qa="signup-name"]');
+    }
+
+    get emailInput() {
+        return cy.get('[data-qa="signup-email"]');
+    }
+
+    get signUpButton() {
+        return cy.get('[data-qa="signup-button"]');
     }
 
     visit() {
-        cy.visit(this.URL);
+        cy.visit(this.url);
     }
 
     fillUsername(username) {
-        cy.get(this.usernameInput).type(username);
+        this.usernameInput.type(username);
     }
 
     fillEmail(email) {
-        cy.get(this.emailInput).type(email);
+        this.emailInput.type(email);
     }
 
     submit() {
-        cy.get(this.signUpButton).click();
+        this.signUpButton.click();
     }
 }
 
-export default new signUpFirstPage();
+export default new SignUpFirstPage();

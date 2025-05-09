@@ -1,5 +1,5 @@
-import signUpFirstPage from "../support/pages/signUpFirstPage";
-import signUpFormPage from "../support/pages/signUpFormPage";
+import signUpFirstPage from "../support/pages/SignUpFirstPage";
+import signUpFormPage from "../support/pages/SignUpFormPage";
 import { generateUserData } from "../support/utils/generateData";
 
 describe('Cadastro de novo usuário', () => {

@@ -1,4 +1,4 @@
-import signInPage from "../support/pages/signInPage";
+import signInPage from "../support/pages/SignInPage";
 
 describe("Login de usuário", () => {
 
@@ -33,7 +33,7 @@ describe("Login de usuário", () => {
         signInPage.fillPassword(userData.invalidUser.password);
         signInPage.submit();
 
-        signInPage.getErrorMessage().should('be.visible');
+        signInPage.errorMessage.should('be.visible');
 
     });
 
