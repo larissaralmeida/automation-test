@@ -1,24 +1,21 @@
-class SignInPage {
+class signInPage {
 
     get url() {
         return "https://www.automationexercise.com/login";
     }
-
     get emailInput() {
         return cy.get('[data-qa="login-email"]');
     }
-
     get passwordInput() {
         return cy.get('[data-qa="login-password"]');
     }
-
     get loginButton() {
         return cy.get('[data-qa="login-button"]');
     }
-
     get errorMessage() {
-        return cy.contains('Your email or password is incorrect!');
+        return cy.contains('p', 'Your email or password is incorrect!');
     }
+
 
     visit() {
         cy.visit(this.url);
@@ -35,6 +32,7 @@ class SignInPage {
     submit() {
         this.loginButton.click();
     }
+
 }
 
-export default new SignInPage();
+export default new signInPage();
