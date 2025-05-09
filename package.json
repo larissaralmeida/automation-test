@@ -5,7 +5,7 @@
     "cypress": "^14.2.0"
   },
   "scripts": {
-    "test": "cypress open",
+    "test": "cypress run",
     "test:headless": "cypress run"
   },
   "dependencies": {
